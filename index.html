@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Hospital System</title>
+  <style>
+    body {
+      background-color: black;
+      color: #9cff9c;
+      font-family: monospace;
+      text-align: center;
+      padding-top: 100px;
+    }
+
+    h1 {
+      color: #00ff00;
+      text-shadow: 0 0 10px #00ff00;
+    }
+
+    .glitch {
+      animation: glitch 1s infinite;
+    }
+
+    @keyframes glitch {
+      0% {opacity: 1;}
+      50% {opacity: 0.3;}
+      100% {opacity: 1;}
+    }
+
+    button {
+      background: black;
+      border: 1px solid #00ff00;
+      color: #00ff00;
+      padding: 10px 20px;
+      cursor: pointer;
+      margin-top: 20px;
+    }
+
+    button:hover {
+      background: #003300;
+    }
+  </style>
+</head>
+
+<body>
+
+<h1 class="glitch">HOSPITAL DATABASE</h1>
+<p id="text">Loading patient records...</p>
+
+<button onclick="reveal()">ACCESS FILE</button>
+
+<script>
+function reveal() {
+  document.getElementById("text").innerHTML =
+  "Patient Status: INFECTED<br>Containment Failed<br><br>☢ SYSTEM ERROR ☢";
+  
+  document.body.style.backgroundColor = "#001100";
+}
+</script>
+
+</body>
+</html>
